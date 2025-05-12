@@ -80,6 +80,34 @@
             color: white;
             font-size: 1em;
         }
+
+        /* Herz-Animation */
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            color: red;
+            opacity: 0;
+            animation: heart-pop 1s forwards;
+        }
+
+        @keyframes heart-pop {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -91,13 +119,25 @@
     <p>zum Muttertag möchte ich dir einfach mal danke sagen – danke für alles, was du für mich tust. Du bist immer da, wenn ich dich brauche!
     <p>Ich liebe dich!</p>
     <p>Dein Felix</p>
-    <a href="#" class="button">Mein Geschenk für dich</a>
+    <a href="#" class="button" id="showHeartButton">Mein Geschenk für dich</a>
 </div>
+
+<!-- Herz-Element -->
+<div id="heart" class="heart">❤️</div>
 
 <footer>
     <p>© 2025 Muttertag - Felix für seine Mama</p>
 </footer>
 
+<script>
+    // Wenn der Button geklickt wird, wird das Herz angezeigt
+    document.getElementById('showHeartButton').addEventListener('click', function() {
+        // Herz anzeigen
+        document.getElementById('heart').style.opacity = 1;
+        // Animation starten
+        document.getElementById('heart').style.animation = 'heart-pop 1s forwards';
+    });
+</script>
+
 </body>
 </html>
-
