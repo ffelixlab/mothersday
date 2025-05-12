@@ -7,102 +7,93 @@
     <title>Muttertag 2025 - Für Mama von Felix</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fff0f5;
             margin: 0;
             padding: 0;
-            color: #333;
-        }
-
-        header {
-            background-color: #ff1493;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3.5em;
             font-family: 'Arial', sans-serif;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .content {
+            background-color: #000000;
+            color: white;
             display: flex;
             justify-content: center;
-            flex-direction: column;
             align-items: center;
+            height: 100vh;
         }
 
-        .content img {
-            max-width: 80%;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px;
-        }
-
-        .text-content {
+        .popup {
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            width: 80%;
             max-width: 600px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
             text-align: center;
-            margin: 20px;
+            animation: popup 0.5s ease-out;
         }
 
-        footer {
-            background-color: #ff1493;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        @keyframes popup {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #ff69b4; /* Sanftes Pink */
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 20px;
         }
 
         .button {
-            background-color: #ff69b4;
+            background-color: #ff69b4; /* Sanftes Pink */
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
+            font-size: 1.2em;
         }
 
         .button:hover {
             background-color: #ff86c1;
         }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
 
-<header>
+<div class="popup">
     <h1>Alles Gute zum Muttertag, Mama!</h1>
-</header>
-
-<section>
-    <div class="container">
-        <div class="content">
-            <div class="text-content">
-                <h2>Für die beste Mama der Welt</h2>
-                <p>Liebe Mama,</p>
-                <p>zum Muttertag möchte ich dir einfach mal danke sagen – danke für alles, was du für mich tust. Du bist immer da, wenn ich dich brauche!/p>
-                <p>Ich liebe dich!</p>
-                <p>Dein Felix</p>
-                <a href="#" class="button">Mein Geschenk für dich</a>
-            </div>
-            <div class="image">
-                <img src="https://via.placeholder.com/500x300.png?text=Für+Mama" alt="Muttertag Bild">
-            </div>
-        </div>
-    </div>
-</section>
+    <h2>Für die beste Mama der Welt</h2>
+    <p>Liebe Mama,</p>
+    <p>zum Muttertag möchte ich dir einfach mal danke sagen – danke für alles, was du für mich tust. Du bist immer da, wenn ich dich brauche, du gibst mir Liebe, Kraft und ein Zuhause, in dem ich mich immer geborgen fühle.</p>
+    <p>Ich bin unendlich dankbar, dich meine Mutter nennen zu dürfen. Du bist die wundervollste Person, die ich kenne, und heute möchte ich dir ein bisschen von dieser Liebe zurückgeben. Danke, dass du immer an mich glaubst und mich auf meinem Weg begleitest.</p>
+    <p>Ich liebe dich!</p>
+    <p>Dein Felix</p>
+    <a href="#" class="button">Mein Geschenk für dich</a>
+</div>
 
 <footer>
     <p>© 2025 Muttertag - Felix für seine Mama</p>
